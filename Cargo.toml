@@ -2,8 +2,12 @@
 name = "utilitips-app"
 version = "0.1.0"
 authors = ["Juan Manuel Parrilla Madrid <jparrill@redhat.com>"]
-edition = "2019"
+edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+config = "0.9"
+serde_derive = "^1.0.8"
+serde = "^1.0.8"
+toml = "*"
