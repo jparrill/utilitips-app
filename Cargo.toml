@@ -1,5 +1,5 @@
 [package]
-name = "utilitips-app"
+name = "utilitips"
 version = "0.1.0"
 authors = ["Juan Manuel Parrilla Madrid <jparrill@redhat.com>"]
 edition = "2018"
@@ -11,3 +11,4 @@ config = "0.9"
 serde_derive = "^1.0.8"
 serde = "^1.0.8"
 toml = "*"
+clap = "2.33.0" 

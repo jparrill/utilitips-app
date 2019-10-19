@@ -17,9 +17,10 @@ pub struct Settings {
 }
 
 impl Settings {
-    pub fn new() -> Result<Self, ConfigError> {
+    pub fn new(cfg_arg: &str) -> Result<Self, ConfigError> {
         let mut s = Config::new();
-        let path = Path::new(DEFAULT_CONF_FILE);
+        let cfg_file = Some(cfg_arg).unwrap_or(DEFAULT_CONF_FILE);
+        let path = Path::new(cfg_file);
 
         // If config file does not exists, we creates a new one based on defaults
         if !path.exists() {
@@ -32,7 +33,7 @@ impl Settings {
         }
         
         // We read from the default file and merge on settings, then return
-        s.merge(File::with_name(DEFAULT_CONF_FILE))?;
+        s.merge(File::with_name(cfg_file))?;
         s.try_into()
     }
 }
