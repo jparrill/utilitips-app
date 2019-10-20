@@ -2,4 +2,4 @@ debug = false
 
 [global]
 repository_path = "/home/jparrill/projects/utilitips"
-content_root_path = "topics"
+content_root_path = "content"
